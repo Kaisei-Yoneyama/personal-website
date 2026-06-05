@@ -4,7 +4,8 @@
     "dev": "vite",
     "build": "vite build --mode client && vite build",
     "preview": "wrangler dev",
-    "deploy": "npm run build && wrangler deploy"
+    "deploy": "npm run build && wrangler deploy",
+    "preinstall": "npx only-allow pnpm"
   },
   "private": true,
   "dependencies": {
@@ -19,5 +20,9 @@
     "tailwindcss": "^4.2.2",
     "vite": "^8.0.9",
     "wrangler": "^4.83.0"
+  },
+  "engines": {
+    "node": ">=24.0.0 <25.0.0",
+    "pnpm": ">=11.0.0 <12.0.0"
   }
 }

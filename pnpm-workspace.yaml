@@ -1,3 +1,10 @@
+# Dependency Resolution
+trustPolicy: no-downgrade
+
+# Peer Dependency Settings
+strictPeerDependencies: true
+
+# Build Settings
 allowBuilds:
   esbuild: true
   sharp: true
