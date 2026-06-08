@@ -18,16 +18,16 @@
     "honox": "0.1.56"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20260420.1",
+    "@cloudflare/workers-types": "^4.20260605.1",
     "@hono/vite-build": "^1.11.1",
-    "@hono/vite-dev-server": "^0.25.2",
+    "@hono/vite-dev-server": "^0.26.0",
     "@tailwindcss/vite": "^4.2.2",
     "oxfmt": "^0.53.0",
     "oxlint": "^1.68.0",
     "oxlint-tsgolint": "^0.23.0",
     "tailwindcss": "^4.2.2",
     "vite": "^8.0.9",
-    "wrangler": "^4.83.0"
+    "wrangler": "^4.98.0"
   },
   "engines": {
     "node": ">=24.0.0 <25.0.0",
