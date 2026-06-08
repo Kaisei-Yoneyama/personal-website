@@ -1,4 +1,5 @@
 {
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,7 +13,6 @@
     "fmt:check": "oxfmt --check",
     "preinstall": "npx only-allow pnpm"
   },
-  "private": true,
   "dependencies": {
     "hono": "^4.12.23",
     "honox": "0.1.56"
