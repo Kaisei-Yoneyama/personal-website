@@ -8,4 +8,4 @@ strictPeerDependencies: true
 allowBuilds:
   esbuild: true
   sharp: true
-  workerd: true
+  workerd: false

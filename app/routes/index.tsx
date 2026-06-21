@@ -3,7 +3,7 @@ import { createRoute } from "honox/factory";
 import Counter from "../islands/counter";
 
 export default createRoute((c) => {
-  const name = c.req.query("name") ?? "Hono";
+  const name = "Hono";
   return c.render(
     <div class="py-8 text-center">
       <title>{name}</title>
