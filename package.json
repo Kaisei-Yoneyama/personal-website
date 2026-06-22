@@ -13,7 +13,7 @@
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
-    "hono": "^4.12.23",
+    "hono": "^4.12.25",
     "honox": "0.1.56"
   },
   "devDependencies": {
