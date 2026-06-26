@@ -35,12 +35,11 @@ jobs:
           cache: pnpm
 
       - name: Install dependencies
-        id: install-dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Lint with Oxlint
-        run: pnpm run lint:github
+      - parallel:
+          - name: Lint with Oxlint
+            run: pnpm run lint:github
 
-      - name: Check formatting with Oxfmt
-        if: ${{ !cancelled() && steps.install-dependencies.outcome == 'success' }}
-        run: pnpm run fmt:check
+          - name: Check formatting with Oxfmt
+            run: pnpm run fmt:check
