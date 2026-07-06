@@ -1,5 +1,4 @@
 import ssg from "@hono/vite-ssg";
-import tailwindcss from "@tailwindcss/vite";
 import honox from "honox/vite";
 import client from "honox/vite/client";
 import { defineConfig } from "vite";
@@ -18,13 +17,15 @@ export default defineConfig(({ mode }) => {
   if (mode === "client") {
     return {
       base,
-      plugins: [client({ input: ["/app/client.ts", "/app/style.css"] }), tailwindcss()],
+      plugins: [client({ input: ["/app/client.ts", "/app/style.css"], jsxImportSource: "react" })],
     };
   }
 
   return {
     build: { emptyOutDir: false },
+    // CommonJS/UMD は SSR でバンドルすると評価に失敗するため、外部化して Node.js の require に解決させる
+    ssr: { external: ["react", "react-dom", "@primer/react-brand"] },
     // base を直接指定すると内部で @hono/vite-dev-server に上書きされるため devServer を経由させる
-    plugins: [honox({ devServer: { base } }), tailwindcss(), ssg({ entry })],
+    plugins: [honox({ devServer: { base } }), ssg({ entry })],
   };
 });

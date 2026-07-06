@@ -13,17 +13,21 @@
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
+    "@hono/react-renderer": "^1.0.1",
+    "@primer/react-brand": "^0.69.0",
     "hono": "^4.12.25",
-    "honox": "0.1.56"
+    "honox": "0.1.56",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
   },
   "devDependencies": {
     "@hono/vite-ssg": "^0.3.3",
-    "@tailwindcss/vite": "^4.2.2",
     "@types/node": "^24.13.2",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
     "oxfmt": "^0.53.0",
     "oxlint": "^1.68.0",
     "oxlint-tsgolint": "^0.23.0",
-    "tailwindcss": "^4.2.2",
     "vite": "^8.0.9"
   },
   "engines": {
