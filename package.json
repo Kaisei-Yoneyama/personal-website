@@ -14,11 +14,11 @@
   },
   "dependencies": {
     "@hono/react-renderer": "^1.0.1",
-    "@primer/react-brand": "^0.70.0",
-    "hono": "^4.12.29",
-    "honox": "0.1.59",
-    "react": "^19.2.7",
-    "react-dom": "^19.2.7"
+    "@primer/react-brand": "^0.71.0",
+    "hono": "^4.12.32",
+    "honox": "0.1.60",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
   },
   "devDependencies": {
     "@hono/vite-ssg": "^0.3.3",
