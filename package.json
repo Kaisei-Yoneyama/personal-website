@@ -18,7 +18,8 @@
     "hono": "^4.12.29",
     "honox": "0.1.59",
     "react": "^19.2.7",
-    "react-dom": "^19.2.7"
+    "react-dom": "^19.2.7",
+    "simple-icons": "^16.27.1"
   },
   "devDependencies": {
     "@hono/vite-ssg": "^0.3.3",

@@ -7,4 +7,13 @@ import * as primerBrandNs from "@primer/react-brand";
 const ns = primerBrandNs as typeof primerBrandNs & { default?: typeof primerBrandNs };
 const primerBrand = ns.default ?? ns;
 
-export const { ThemeProvider } = primerBrand;
+export const {
+  Box,
+  Hero,
+  MinimalFooter,
+  Section,
+  SectionIntro,
+  SubdomainNavBar,
+  ThemeProvider,
+  Tiles,
+} = primerBrand;
