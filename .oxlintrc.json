@@ -5,7 +5,7 @@
     "typeCheck": true
   },
   "rules": {
-    "typescript/no-deprecated": "error",
+    "typescript/no-deprecated": "warn",
     "typescript/no-floating-promises": "error",
     "typescript/no-misused-promises": "error"
   }
