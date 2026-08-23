@@ -10,16 +10,16 @@ importers:
     dependencies:
       '@hono/react-renderer':
         specifier: ^1.0.1
-        version: 1.0.1(hono@4.12.29)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+        version: 1.0.1(hono@4.12.34)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       '@primer/react-brand':
         specifier: ^0.70.0
         version: 0.70.0(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
       hono:
-        specifier: ^4.12.29
-        version: 4.12.29
+        specifier: ^4.12.34
+        version: 4.12.34
       honox:
         specifier: 0.1.59
-        version: 0.1.59(hono@4.12.29)(miniflare@4.20260603.0)(supports-color@10.2.2)(wrangler@4.98.0(@cloudflare/workers-types@4.20260605.1))
+        version: 0.1.59(hono@4.12.34)(miniflare@4.20260603.0)(supports-color@10.2.2)(wrangler@4.98.0(@cloudflare/workers-types@4.20260605.1))
       react:
         specifier: ^19.2.7
         version: 19.2.7
@@ -32,7 +32,7 @@ importers:
     devDependencies:
       '@hono/vite-ssg':
         specifier: ^0.3.3
-        version: 0.3.3(hono@4.12.29)
+        version: 0.3.3(hono@4.12.34)
       '@types/node':
         specifier: ^24.13.3
         version: 24.13.3
@@ -1156,8 +1156,8 @@ packages:
     engines: {node: '>=0.6.0'}
     hasBin: true
 
-  hono@4.12.29:
-    resolution: {integrity: sha512-1hNiRjawYrLq/4m3DQQjPGFg0VZkk4RjQJDff/excI6Dm9BiL75qxGrd7/c6YOxPdq6AscP3LiXhQ6fKFC1Waw==}
+  hono@4.12.34:
+    resolution: {integrity: sha512-GqXJqY/xJkJmuloTrnV1ZEXG3fqte+VjkUqoRNZXcrUidiUOP4fMSIHHY4tsqZBK++kVyWmt/AAfSUuy57/eSA==}
     engines: {node: '>=16.9.0'}
 
   honox@0.1.59:
@@ -1708,28 +1708,28 @@ snapshots:
   '@esbuild/win32-x64@0.27.3':
     optional: true
 
-  '@hono/node-server@1.19.14(hono@4.12.29)':
+  '@hono/node-server@1.19.14(hono@4.12.34)':
     dependencies:
-      hono: 4.12.29
+      hono: 4.12.34
 
-  '@hono/react-renderer@1.0.1(hono@4.12.29)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
+  '@hono/react-renderer@1.0.1(hono@4.12.34)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)':
     dependencies:
-      hono: 4.12.29
+      hono: 4.12.34
       react: 19.2.7
       react-dom: 19.2.7(react@19.2.7)
 
-  '@hono/vite-dev-server@0.25.3(hono@4.12.29)(miniflare@4.20260603.0)(wrangler@4.98.0(@cloudflare/workers-types@4.20260605.1))':
+  '@hono/vite-dev-server@0.25.3(hono@4.12.34)(miniflare@4.20260603.0)(wrangler@4.98.0(@cloudflare/workers-types@4.20260605.1))':
     dependencies:
-      '@hono/node-server': 1.19.14(hono@4.12.29)
-      hono: 4.12.29
+      '@hono/node-server': 1.19.14(hono@4.12.34)
+      hono: 4.12.34
       minimatch: 9.0.9
     optionalDependencies:
       miniflare: 4.20260603.0
       wrangler: 4.98.0(@cloudflare/workers-types@4.20260605.1)
 
-  '@hono/vite-ssg@0.3.3(hono@4.12.29)':
+  '@hono/vite-ssg@0.3.3(hono@4.12.34)':
     dependencies:
-      hono: 4.12.29
+      hono: 4.12.34
 
   '@img/colour@1.1.0':
     optional: true
@@ -2321,16 +2321,16 @@ snapshots:
     dependencies:
       minimist: 1.2.8
 
-  hono@4.12.29: {}
+  hono@4.12.34: {}
 
-  honox@0.1.59(hono@4.12.29)(miniflare@4.20260603.0)(supports-color@10.2.2)(wrangler@4.98.0(@cloudflare/workers-types@4.20260605.1)):
+  honox@0.1.59(hono@4.12.34)(miniflare@4.20260603.0)(supports-color@10.2.2)(wrangler@4.98.0(@cloudflare/workers-types@4.20260605.1)):
     dependencies:
       '@babel/generator': 7.29.1
       '@babel/parser': 7.29.3
       '@babel/traverse': 7.29.0(supports-color@10.2.2)
       '@babel/types': 7.29.0
-      '@hono/vite-dev-server': 0.25.3(hono@4.12.29)(miniflare@4.20260603.0)(wrangler@4.98.0(@cloudflare/workers-types@4.20260605.1))
-      hono: 4.12.29
+      '@hono/vite-dev-server': 0.25.3(hono@4.12.34)(miniflare@4.20260603.0)(wrangler@4.98.0(@cloudflare/workers-types@4.20260605.1))
+      hono: 4.12.34
       jsonc-parser: 3.3.1
       precinct: 12.2.0(supports-color@10.2.2)
     optionalDependencies:
