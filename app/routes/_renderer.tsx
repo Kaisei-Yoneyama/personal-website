@@ -12,6 +12,7 @@ export default reactRenderer(({ children, title }) => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href={withBase("/favicon.ico")} />
+        {/* @ts-expect-error Hono v4.13.0 で React と型が合わなくなったので応急対応 */}
         <Link href="/app/style.css" rel="stylesheet" />
         <Script src="/app/client.ts" async />
         {title && <title>{title}</title>}
