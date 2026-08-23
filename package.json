@@ -14,18 +14,18 @@
   },
   "dependencies": {
     "@hono/react-renderer": "^1.0.1",
-    "@primer/react-brand": "^0.70.0",
-    "hono": "^4.12.34",
-    "honox": "0.1.59",
-    "react": "^19.2.7",
-    "react-dom": "^19.2.7",
-    "simple-icons": "^16.27.1"
+    "@primer/react-brand": "^0.73.0",
+    "hono": "^4.13.2",
+    "honox": "0.1.60",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "simple-icons": "^16.28.0"
   },
   "devDependencies": {
     "@hono/vite-ssg": "^0.3.3",
     "@types/node": "^24.13.3",
-    "@types/react": "^19.2.17",
-    "@types/react-dom": "^19.2.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
     "oxfmt": "^0.59.0",
     "oxlint": "^1.74.0",
     "oxlint-tsgolint": "^7.0.2001",
