@@ -15,7 +15,7 @@
   "dependencies": {
     "@hono/react-renderer": "^1.0.1",
     "@primer/react-brand": "^0.70.0",
-    "hono": "^4.12.29",
+    "hono": "^4.12.34",
     "honox": "0.1.59",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
