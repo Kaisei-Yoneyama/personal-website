@@ -9,6 +9,7 @@ const primerBrand = ns.default ?? ns;
 
 export const {
   Box,
+  Button,
   Hero,
   MinimalFooter,
   Section,

@@ -1,5 +1,5 @@
 import { withBase } from "../lib/path";
-import { Hero } from "../lib/primer-brand";
+import { Button, Hero } from "../lib/primer-brand";
 
 type ErrorPageProps = {
   code: string;
@@ -13,7 +13,11 @@ export default function ErrorPage({ code, heading, description }: ErrorPageProps
       <Hero.Label>{code}</Hero.Label>
       <Hero.Heading>{heading}</Hero.Heading>
       <Hero.Description>{description}</Hero.Description>
-      <Hero.PrimaryAction href={withBase("/")}>トップページに戻る</Hero.PrimaryAction>
+      <Hero.ButtonGroup>
+        <Button as="a" href={withBase("/")}>
+          トップページに戻る
+        </Button>
+      </Hero.ButtonGroup>
     </Hero>
   );
 }

@@ -15,7 +15,7 @@ import {
   siWxt,
 } from "simple-icons";
 
-import { Box, Hero, Section, SectionIntro, Tiles } from "../lib/primer-brand";
+import { Box, Button, Hero, Section, SectionIntro, Tiles } from "../lib/primer-brand";
 
 const SKILLS: readonly { icon: SimpleIcon; name: string }[] = [
   { icon: siTypescript, name: "TypeScript" },
@@ -55,10 +55,14 @@ export default createRoute((c) => {
         <Hero.Description>
           プログラミング教材制作に携わっています。個人開発では、ウェブアプリケーション開発をはじめ、ブラウザー拡張機能開発やボット開発に勤しんでいます。
         </Hero.Description>
-        <Hero.PrimaryAction href="https://github.com/Kaisei-Yoneyama">
-          GitHub を見る
-        </Hero.PrimaryAction>
-        <Hero.SecondaryAction href="#skills">スキルを見る</Hero.SecondaryAction>
+        <Hero.ButtonGroup>
+          <Button as="a" href="https://github.com/Kaisei-Yoneyama">
+            GitHub を見る
+          </Button>
+          <Button as="a" href="#skills">
+            スキルを見る
+          </Button>
+        </Hero.ButtonGroup>
       </Hero>
 
       <Box borderBlockStartWidth="thin" borderColor="muted" borderStyle="solid">
