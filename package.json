@@ -15,8 +15,8 @@
   "dependencies": {
     "@hono/react-renderer": "^1.0.1",
     "@primer/react-brand": "^0.73.0",
-    "hono": "^4.13.2",
-    "honox": "0.1.60",
+    "hono": "^4.13.3",
+    "honox": "0.1.61",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "simple-icons": "^16.28.0"
