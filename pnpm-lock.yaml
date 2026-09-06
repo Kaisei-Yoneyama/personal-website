@@ -10,16 +10,16 @@ importers:
     dependencies:
       '@hono/react-renderer':
         specifier: ^1.0.1
-        version: 1.0.1(hono@4.13.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+        version: 1.0.1(hono@4.13.5)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       '@primer/react-brand':
-        specifier: ^0.73.0
-        version: 0.73.0(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
+        specifier: ^0.74.0
+        version: 0.74.0(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
       hono:
-        specifier: ^4.13.2
-        version: 4.13.2
+        specifier: ^4.13.5
+        version: 4.13.5
       honox:
-        specifier: 0.1.60
-        version: 0.1.60(hono@4.13.2)(miniflare@4.20260603.0)(supports-color@10.2.2)(wrangler@4.98.0(@cloudflare/workers-types@4.20260605.1))
+        specifier: 0.1.61
+        version: 0.1.61(hono@4.13.5)(miniflare@4.20260603.0)(supports-color@10.2.2)(wrangler@4.98.0(@cloudflare/workers-types@4.20260605.1))
       react:
         specifier: ^19.2.8
         version: 19.2.8
@@ -27,12 +27,12 @@ importers:
         specifier: ^19.2.8
         version: 19.2.8(react@19.2.8)
       simple-icons:
-        specifier: ^16.28.0
-        version: 16.28.0
+        specifier: ^16.29.0
+        version: 16.29.0
     devDependencies:
       '@hono/vite-ssg':
         specifier: ^0.3.3
-        version: 0.3.3(hono@4.13.2)
+        version: 0.3.3(hono@4.13.5)
       '@types/node':
         specifier: ^24.13.3
         version: 24.13.3
@@ -814,8 +814,8 @@ packages:
   '@primer/behaviors@1.10.3':
     resolution: {integrity: sha512-cxxWDeR5IE7vdL0Ca0RAAAuPVrU+Bo8CSP1WfawGo4rEP1sZTi7hwl5i7TT0jCTCR0C9IfnQBfSPAkz0oznxUw==}
 
-  '@primer/react-brand@0.73.0':
-    resolution: {integrity: sha512-DE9V0rW8/sDlx3TkXeJpt6sRSe7KR0nKgXvEw81CNOUv1B7yNYirMG5GjdgPWOe1YMRW6ZRtwgPC9Tg7ALa+Lw==}
+  '@primer/react-brand@0.74.0':
+    resolution: {integrity: sha512-bOgO48EBP7EYRE4/JSqrd33jj4islNBgCUNTs+DZqwCjsxLxlnzq8ezoeEQP2Pr1fpZcke7ImtPzU7h3VQuXLQ==}
     engines: {node: '>=24.0.0', npm: '>=8.0.0'}
     peerDependencies:
       '@types/react': '>=18 <20'
@@ -1143,12 +1143,12 @@ packages:
     engines: {node: '>=0.6.0'}
     hasBin: true
 
-  hono@4.13.2:
-    resolution: {integrity: sha512-JydRilDRkYBQMt9qR9U92mXxmbGqsqSn/IKOrh4e7/gEbn+0zSr8igTu0obwJoNGN4sez28DIql7FBHWydoJpA==}
+  hono@4.13.5:
+    resolution: {integrity: sha512-O6+/eCYRkzzzy0rPWwKLiGBR1nFuUPZynnwjxN1MBA62NNqbT0wQEzQyK2gSO5yDIDB336sXQleAhOHrzlYyKw==}
     engines: {node: '>=16.9.0'}
 
-  honox@0.1.60:
-    resolution: {integrity: sha512-WeYf6S2UE8XYtLrSdI60edWyVkdrODgbNAapQgDnq377zv5vQ3psDwsEpzDHXMiT2J27/mMqqrESlubLFv5Bfw==}
+  honox@0.1.61:
+    resolution: {integrity: sha512-HMvVTyAIJYIWjHUvdowQvnMVA3I1HKeKD71TVCAKiTdUI+xU7cYRryMK+ASmnRb7lFV6Yak4/d1VqXjJnEYSvg==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
       hono: '>=4.*'
@@ -1376,8 +1376,8 @@ packages:
     resolution: {integrity: sha512-Ou9I5Ft9WNcCbXrU9cMgPBcCK8LiwLqcbywW3t4oDV37n1pzpuNLsYiAV8eODnjbtQlSDwZ2cUEeQz4E54Hltg==}
     engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
 
-  simple-icons@16.28.0:
-    resolution: {integrity: sha512-sQPR5AtK/ijRjou7zw7mlLp08oB6FH7i0lOy5XJ2zp9mJs/yejgiOn7KvQoe2q4YJIx6VmgUSW5AOefebPt5kg==}
+  simple-icons@16.29.0:
+    resolution: {integrity: sha512-4H94f5ZgcCcgJroc902TFlFdgPu2IU2eD7+WebN2Z14xKYrKHeJ4UQcZwzgSuH4Rgzw+jp7sbHl40NefuIEYsg==}
     engines: {node: '>=0.12.18'}
 
   source-map-js@1.2.1:
@@ -1687,28 +1687,28 @@ snapshots:
   '@esbuild/win32-x64@0.27.3':
     optional: true
 
-  '@hono/node-server@1.19.17(hono@4.13.2)':
+  '@hono/node-server@1.19.17(hono@4.13.5)':
     dependencies:
-      hono: 4.13.2
+      hono: 4.13.5
 
-  '@hono/react-renderer@1.0.1(hono@4.13.2)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
+  '@hono/react-renderer@1.0.1(hono@4.13.5)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
     dependencies:
-      hono: 4.13.2
+      hono: 4.13.5
       react: 19.2.8
       react-dom: 19.2.8(react@19.2.8)
 
-  '@hono/vite-dev-server@0.25.3(hono@4.13.2)(miniflare@4.20260603.0)(wrangler@4.98.0(@cloudflare/workers-types@4.20260605.1))':
+  '@hono/vite-dev-server@0.25.3(hono@4.13.5)(miniflare@4.20260603.0)(wrangler@4.98.0(@cloudflare/workers-types@4.20260605.1))':
     dependencies:
-      '@hono/node-server': 1.19.17(hono@4.13.2)
-      hono: 4.13.2
+      '@hono/node-server': 1.19.17(hono@4.13.5)
+      hono: 4.13.5
       minimatch: 9.0.9
     optionalDependencies:
       miniflare: 4.20260603.0
       wrangler: 4.98.0(@cloudflare/workers-types@4.20260605.1)
 
-  '@hono/vite-ssg@0.3.3(hono@4.13.2)':
+  '@hono/vite-ssg@0.3.3(hono@4.13.5)':
     dependencies:
-      hono: 4.13.2
+      hono: 4.13.5
 
   '@img/colour@1.1.0':
     optional: true
@@ -1980,7 +1980,7 @@ snapshots:
 
   '@primer/behaviors@1.10.3': {}
 
-  '@primer/react-brand@0.73.0(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
+  '@primer/react-brand@0.74.0(@types/react-dom@19.2.4(@types/react@19.2.18))(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)':
     dependencies:
       '@oddbird/popover-polyfill': 0.5.2
       '@primer/behaviors': 1.10.3
@@ -2284,16 +2284,16 @@ snapshots:
     dependencies:
       minimist: 1.2.8
 
-  hono@4.13.2: {}
+  hono@4.13.5: {}
 
-  honox@0.1.60(hono@4.13.2)(miniflare@4.20260603.0)(supports-color@10.2.2)(wrangler@4.98.0(@cloudflare/workers-types@4.20260605.1)):
+  honox@0.1.61(hono@4.13.5)(miniflare@4.20260603.0)(supports-color@10.2.2)(wrangler@4.98.0(@cloudflare/workers-types@4.20260605.1)):
     dependencies:
       '@babel/generator': 7.29.1
       '@babel/parser': 7.29.3
       '@babel/traverse': 7.29.0(supports-color@10.2.2)
       '@babel/types': 7.29.0
-      '@hono/vite-dev-server': 0.25.3(hono@4.13.2)(miniflare@4.20260603.0)(wrangler@4.98.0(@cloudflare/workers-types@4.20260605.1))
-      hono: 4.13.2
+      '@hono/vite-dev-server': 0.25.3(hono@4.13.5)(miniflare@4.20260603.0)(wrangler@4.98.0(@cloudflare/workers-types@4.20260605.1))
+      hono: 4.13.5
       jsonc-parser: 3.3.1
       precinct: 12.2.0(supports-color@10.2.2)
     optionalDependencies:
@@ -2573,7 +2573,7 @@ snapshots:
       '@img/sharp-win32-x64': 0.34.5
     optional: true
 
-  simple-icons@16.28.0: {}
+  simple-icons@16.29.0: {}
 
   source-map-js@1.2.1: {}
 
