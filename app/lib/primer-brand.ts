@@ -10,11 +10,16 @@ const primerBrand = ns.default ?? ns;
 export const {
   Box,
   Button,
+  Card,
   Hero,
   MinimalFooter,
+  Prose,
   Section,
   SectionIntro,
+  Stack,
   SubdomainNavBar,
+  Text,
   ThemeProvider,
   Tiles,
+  Token,
 } = primerBrand;

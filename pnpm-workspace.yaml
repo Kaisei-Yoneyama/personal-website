@@ -1,5 +1,12 @@
 # Dependency Resolution
 trustPolicy: no-downgrade
+packageExtensions:
+  # Vite 8 は Rolldown ベースで Rollup は使わない
+  # optional にして autoInstallPeers によるインストールと欠落によるエラーを防ぐ
+  "@mdx-js/rollup":
+    peerDependenciesMeta:
+      rollup:
+        optional: true
 
 # Peer Dependency Settings
 strictPeerDependencies: true

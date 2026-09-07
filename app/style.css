@@ -4,3 +4,40 @@
 :root {
   color-scheme: dark;
 }
+
+/*
+ * ポインター操作でも輪郭線が出てしまうため、キーボード操作の場合だけ出るようにする
+ * https://github.com/primer/brand/blob/4dea1ea49c3da5ff7cd82dd7ff96310af76a57b8/packages/react/src/Card/Card.module.css#L240-L243
+ */
+[class*="Card__outer"]:focus-within:not(:has(:focus-visible)) {
+  outline: none;
+}
+
+/*
+ * remark-rehype の README に記載の CSS がベースになっている
+ * https://github.com/remarkjs/remark-rehype/blob/b5a2e5bb0f14607b6fc79ccbfdf0d518a4f304de/readme.md#css
+ */
+.footnotes {
+  font-size: var(--brand-text-size-100);
+  color: var(--brand-color-text-muted);
+  border-top: var(--brand-borderWidth-thin) solid var(--brand-color-border-muted);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  word-wrap: normal;
+  border: 0;
+}
+
+[data-footnote-ref]::before {
+  content: "[";
+}
+
+[data-footnote-ref]::after {
+  content: "]";
+}

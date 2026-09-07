@@ -15,7 +15,13 @@ import {
   siWxt,
 } from "simple-icons";
 
+import PostList from "../components/post-list";
+import { withBase } from "../lib/path";
+import { posts } from "../lib/posts";
 import { Box, Button, Hero, Section, SectionIntro, Tiles } from "../lib/primer-brand";
+
+const description =
+  "プログラミング教材制作に携わっています。個人開発では、ウェブアプリケーション開発をはじめ、ブラウザー拡張機能開発やボット開発に勤しんでいます。";
 
 const SKILLS: readonly { icon: SimpleIcon; name: string }[] = [
   { icon: siTypescript, name: "TypeScript" },
@@ -31,6 +37,8 @@ const SKILLS: readonly { icon: SimpleIcon; name: string }[] = [
   { icon: siDocker, name: "Docker" },
   { icon: siGithubactions, name: "GitHub Actions" },
 ];
+
+const recentPosts = posts.slice(0, 3);
 
 function Logo({ icon }: { icon: SimpleIcon }) {
   return (
@@ -52,9 +60,7 @@ export default createRoute((c) => {
       <Hero variant="gridline">
         <Hero.Label>Web Developer</Hero.Label>
         <Hero.Heading>Kaisei Yoneyama</Hero.Heading>
-        <Hero.Description>
-          プログラミング教材制作に携わっています。個人開発では、ウェブアプリケーション開発をはじめ、ブラウザー拡張機能開発やボット開発に勤しんでいます。
-        </Hero.Description>
+        <Hero.Description>{description}</Hero.Description>
         <Hero.ButtonGroup>
           <Button as="a" href="https://github.com/Kaisei-Yoneyama">
             GitHub を見る
@@ -84,7 +90,31 @@ export default createRoute((c) => {
           </Box>
         </Section>
       </Box>
+
+      {recentPosts.length > 0 && (
+        <Box borderBlockStartWidth="thin" borderColor="muted" borderStyle="solid">
+          <Section id="blog" paddingBlockStart="normal" paddingBlockEnd="normal">
+            <SectionIntro align="center">
+              <SectionIntro.Label>Blog</SectionIntro.Label>
+              <SectionIntro.Heading size="3">最近の記事</SectionIntro.Heading>
+              <SectionIntro.Description>
+                開発の記録や学んだことを書いています。
+              </SectionIntro.Description>
+              <SectionIntro.Link href={withBase("/blog/")}>すべての記事を見る</SectionIntro.Link>
+            </SectionIntro>
+
+            <Box
+              marginBlockStart={{ narrow: 32, regular: 48 }}
+              borderBlockStartWidth="thin"
+              borderColor="muted"
+              borderStyle="solid"
+            >
+              <PostList posts={recentPosts} headingAs="h3" />
+            </Box>
+          </Section>
+        </Box>
+      )}
     </>,
-    { title: "Kaisei Yoneyama" },
+    { description },
   );
 });

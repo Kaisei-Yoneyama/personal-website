@@ -1,6 +1,11 @@
 import ssg from "@hono/vite-ssg";
+import mdx from "@mdx-js/rollup";
+import rehypeShiki, { type RehypeShikiOptions } from "@shikijs/rehype";
 import honox from "honox/vite";
 import client from "honox/vite/client";
+import remarkFrontmatter from "remark-frontmatter";
+import remarkGfm from "remark-gfm";
+import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import { defineConfig } from "vite";
 
 const entry = "./app/server.ts";
@@ -25,7 +30,24 @@ export default defineConfig(({ mode }) => {
     build: { emptyOutDir: false },
     // CommonJS/UMD は SSR でバンドルすると評価に失敗するため、外部化して Node.js の require に解決させる
     ssr: { external: ["react", "react-dom", "@primer/react-brand"] },
-    // base を直接指定すると内部で @hono/vite-dev-server に上書きされるため devServer を経由させる
-    plugins: [honox({ devServer: { base } }), ssg({ entry })],
+    plugins: [
+      // base を直接指定すると内部で @hono/vite-dev-server に上書きされるため devServer を経由させる
+      honox({ devServer: { base } }),
+      ssg({ entry }),
+      mdx({
+        jsxImportSource: "react",
+        providerImportSource: "/app/lib/mdx-components.tsx",
+        remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter, remarkGfm],
+        rehypePlugins: [
+          [
+            rehypeShiki,
+            {
+              theme: "github-dark-default",
+              rootStyle: false,
+            } satisfies RehypeShikiOptions,
+          ],
+        ],
+      }),
+    ],
   };
 });

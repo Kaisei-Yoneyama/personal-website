@@ -9,6 +9,7 @@ export default function Header() {
       logoHref="https://github.com/Kaisei-Yoneyama"
       fixed={false}
     >
+      <SubdomainNavBar.Link href={withBase("/blog/")}>Blog</SubdomainNavBar.Link>
       <SubdomainNavBar.Link href={withBase("/#skills")}>Skills</SubdomainNavBar.Link>
       <SubdomainNavBar.PrimaryAction href="https://github.com/Kaisei-Yoneyama">
         GitHub

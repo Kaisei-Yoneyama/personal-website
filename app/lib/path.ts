@@ -1,3 +1,20 @@
+/**
+ * ルート相対 URL パスであるか否かを判定する。
+ * @param path パス
+ * @returns ルート相対 URL パスであるか否かを示す論理値
+ */
+export function isSitePath(path: unknown): path is `/${string}` {
+  return (
+    typeof path === "string" &&
+    path.startsWith("/") &&
+    !path.startsWith("//") &&
+    !path.includes("\\") &&
+    !path.includes("\t") &&
+    !path.includes("\n") &&
+    !path.includes("\r")
+  );
+}
+
 type NormalizedBase<Base extends string> = Base extends `${infer Normalized}/` ? Normalized : Base;
 
 /**
@@ -16,7 +33,7 @@ function createSitePath<const Base extends `/${string}`>(
       ? never
       : unknown),
 ) {
-  if (base.startsWith("//") || /[\\\t\n\r]/.test(base)) {
+  if (!isSitePath(base)) {
     throw new TypeError(`Invalid base path: ${JSON.stringify(base)}`);
   }
 
@@ -28,7 +45,7 @@ function createSitePath<const Base extends `/${string}`>(
         ? never
         : unknown),
   ): `${NormalizedBase<Base>}${Path}` => {
-    if (path.startsWith("//") || /[\\\t\n\r]/.test(path)) {
+    if (!isSitePath(path)) {
       throw new TypeError(`Invalid site path: ${JSON.stringify(path)}`);
     }
 

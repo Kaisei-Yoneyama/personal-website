@@ -5,7 +5,9 @@ import Header from "../islands/header";
 import { withBase } from "../lib/path";
 import { Box, MinimalFooter, ThemeProvider } from "../lib/primer-brand";
 
-export default reactRenderer(({ children, title }) => {
+const SITE_NAME = "Kaisei Yoneyama";
+
+export default reactRenderer(({ children, title, description }) => {
   return (
     <html lang="ja">
       <head>
@@ -15,7 +17,8 @@ export default reactRenderer(({ children, title }) => {
         {/* @ts-expect-error Hono v4.13.0 で React と型が合わなくなったので応急対応 */}
         <Link href="/app/style.css" rel="stylesheet" />
         <Script src="/app/client.ts" async />
-        {title && <title>{title}</title>}
+        <title>{title ? `${title} | ${SITE_NAME}` : SITE_NAME}</title>
+        {description && <meta name="description" content={description} />}
       </head>
       <body>
         <ThemeProvider
