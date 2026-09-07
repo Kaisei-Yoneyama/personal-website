@@ -1,7 +1,8 @@
 import { reactRenderer } from "@hono/react-renderer";
 import { renderToStaticMarkup } from "react-dom/server";
 
-import { Box, Hero, Prose, Stack, Token } from "../../../lib/primer-brand";
+import { withBase } from "../../../lib/path";
+import { Box, Breadcrumbs, Hero, Prose, Stack, Token } from "../../../lib/primer-brand";
 
 export default reactRenderer(({ children, Layout, title, description, frontmatter }) => {
   // /blog 配下のエラーページ (frontmatter なし) もここを通る
@@ -18,6 +19,20 @@ export default reactRenderer(({ children, Layout, title, description, frontmatte
   return (
     <Layout title={frontmatter.title} description={frontmatter.description}>
       <>
+        <Box
+          paddingBlockStart={{ narrow: 32, regular: 64 }}
+          paddingInlineStart={{ narrow: 32, regular: 64 }}
+          paddingInlineEnd={{ narrow: 32, regular: 64 }}
+        >
+          <Breadcrumbs>
+            <Breadcrumbs.Item href={withBase("/")}>ホーム</Breadcrumbs.Item>
+            <Breadcrumbs.Item href={withBase("/blog/")}>ブログ</Breadcrumbs.Item>
+            <Breadcrumbs.Item href="" selected>
+              {frontmatter.title}
+            </Breadcrumbs.Item>
+          </Breadcrumbs>
+        </Box>
+
         <Hero
           variant="gridline"
           trailingComponent={() => (

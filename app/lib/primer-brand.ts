@@ -9,6 +9,7 @@ const primerBrand = ns.default ?? ns;
 
 export const {
   Box,
+  Breadcrumbs,
   Button,
   Card,
   Hero,
