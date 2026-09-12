@@ -3,6 +3,9 @@
   "editor.defaultFormatter": "oxc.oxc-vscode",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.oxc": "always"
-  }
+    "source.fixAll.oxc": "always",
+    "source.fixAll.textlint": "explicit"
+  },
+  "textlint.targetPath": "**/(content)/*.{md,mdx}",
+  "textlint.languages": ["markdown", "mdx"]
 }

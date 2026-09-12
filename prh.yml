@@ -1,0 +1,30 @@
+version: 1
+
+rules:
+  # MARK: 単位
+
+  - expected: "$1 $2"
+    pattern: '/((?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?) *([KMGTPEZYRQ]i?B)\b/'
+
+  - expected: "$1 ビット"
+    pattern: '/((?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?) *bits?\b/'
+
+  - expected: "$1 バイト"
+    pattern: '/((?:\d{1,3}(?:,\d{3})+|\d+)(?:\.\d+)?) *bytes?\b/'
+
+  # MARK: 約物
+
+  - expected: "、"
+    pattern: "/，/"
+
+  - expected: "。"
+    pattern: "/．/"
+
+  - expected: ":"
+    pattern: "/：/"
+
+  - expected: ";"
+    pattern: "/；/"
+
+  - expected: "/"
+    pattern: "/／/"

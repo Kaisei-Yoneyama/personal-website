@@ -34,5 +34,8 @@ jobs:
           - name: Lint with Oxlint
             run: pnpm run lint:github
 
+          - name: Lint with textlint
+            run: pnpm run lint:text:github
+
           - name: Check formatting with Oxfmt
             run: pnpm run fmt:check
