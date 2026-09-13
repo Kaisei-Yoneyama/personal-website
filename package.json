@@ -22,7 +22,7 @@
     "honox": "0.1.61",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "simple-icons": "^16.29.0",
+    "simple-icons": "^16.30.0",
     "zod": "^4.5.4"
   },
   "devDependencies": {
