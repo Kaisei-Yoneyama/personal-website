@@ -1,9 +1,10 @@
 import { reactRenderer } from "@hono/react-renderer";
 import { Link, Script } from "honox/server";
 
+import Footer from "../islands/footer";
 import Header from "../islands/header";
 import { withBase } from "../lib/path";
-import { Box, MinimalFooter, ThemeProvider } from "../lib/primer-brand";
+import { Box, ThemeProvider } from "../lib/primer-brand";
 
 const SITE_NAME = "Kaisei Yoneyama";
 
@@ -41,16 +42,7 @@ export default reactRenderer(({ children, title, description }) => {
               {children}
             </Box>
           </main>
-          <MinimalFooter
-            socialLinks={false}
-            copyrightStatement={`© ${new Date().getFullYear()} Kaisei Yoneyama`}
-            logoHref="https://github.com/Kaisei-Yoneyama"
-          >
-            <MinimalFooter.Link href="https://github.com/Kaisei-Yoneyama">
-              GitHub
-            </MinimalFooter.Link>
-            <MinimalFooter.Link href="https://twitter.com/kaisei_yoneyama">X</MinimalFooter.Link>
-          </MinimalFooter>
+          <Footer copyrightStatement={`© ${new Date().getFullYear()} ${SITE_NAME}`} />
         </ThemeProvider>
       </body>
     </html>
