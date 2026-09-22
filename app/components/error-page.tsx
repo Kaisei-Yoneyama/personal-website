@@ -1,5 +1,5 @@
+import Hero from "../islands/hero";
 import { withBase } from "../lib/path";
-import { Button, Hero } from "../lib/primer-brand";
 
 type ErrorPageProps = {
   code: string;
@@ -9,15 +9,11 @@ type ErrorPageProps = {
 
 export default function ErrorPage({ code, heading, description }: ErrorPageProps) {
   return (
-    <Hero variant="gridline">
-      <Hero.Label>{code}</Hero.Label>
-      <Hero.Heading>{heading}</Hero.Heading>
-      <Hero.Description>{description}</Hero.Description>
-      <Hero.ButtonGroup>
-        <Button as="a" href={withBase("/")}>
-          トップページに戻る
-        </Button>
-      </Hero.ButtonGroup>
-    </Hero>
+    <Hero
+      label={code}
+      heading={heading}
+      description={description}
+      actions={[{ href: withBase("/"), text: "トップページに戻る" }]}
+    />
   );
 }

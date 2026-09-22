@@ -1,8 +1,9 @@
 import { reactRenderer } from "@hono/react-renderer";
 import { renderToStaticMarkup } from "react-dom/server";
 
+import Hero from "../../../islands/hero";
 import { withBase } from "../../../lib/path";
-import { Box, Breadcrumbs, Hero, Prose, Stack, Token } from "../../../lib/primer-brand";
+import { Box, Breadcrumbs, Prose } from "../../../lib/primer-brand";
 
 export default reactRenderer(({ children, Layout, title, description, frontmatter }) => {
   // /blog 配下のエラーページ (frontmatter なし) もここを通る
@@ -34,24 +35,11 @@ export default reactRenderer(({ children, Layout, title, description, frontmatte
         </Box>
 
         <Hero
-          variant="gridline"
-          trailingComponent={() => (
-            <Stack direction="horizontal" gap={8} padding="none" flexWrap="wrap">
-              <Token variant="outline">
-                公開 <time dateTime={frontmatter.published}>{frontmatter.published}</time>
-              </Token>
-              {frontmatter.modified && (
-                <Token variant="outline">
-                  更新 <time dateTime={frontmatter.modified}>{frontmatter.modified}</time>
-                </Token>
-              )}
-            </Stack>
-          )}
-        >
-          <Hero.Label>Blog</Hero.Label>
-          <Hero.Heading>{frontmatter.title}</Hero.Heading>
-          <Hero.Description>{frontmatter.description}</Hero.Description>
-        </Hero>
+          label="Blog"
+          heading={frontmatter.title}
+          description={frontmatter.description}
+          dates={{ published: frontmatter.published, modified: frontmatter.modified }}
+        />
 
         {/* Hero のパディングに合わせて罫線から離す */}
         <Box

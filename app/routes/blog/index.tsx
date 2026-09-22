@@ -1,19 +1,16 @@
 import { createRoute } from "honox/factory";
 
 import PostList from "../../components/post-list";
+import Hero from "../../islands/hero";
 import { posts } from "../../lib/posts";
-import { Box, Hero, Text } from "../../lib/primer-brand";
+import { Box, Text } from "../../lib/primer-brand";
 
 const description = "開発の記録や学んだことを書いています。";
 
 export default createRoute((c) => {
   return c.render(
     <>
-      <Hero variant="gridline">
-        <Hero.Label>Blog</Hero.Label>
-        <Hero.Heading>ブログ</Hero.Heading>
-        <Hero.Description>{description}</Hero.Description>
-      </Hero>
+      <Hero label="Blog" heading="ブログ" description={description} />
 
       <Box borderBlockStartWidth="thin" borderColor="muted" borderStyle="solid">
         {posts.length === 0 ? (

@@ -16,9 +16,10 @@ import {
 } from "simple-icons";
 
 import PostList from "../components/post-list";
+import Hero from "../islands/hero";
 import { withBase } from "../lib/path";
 import { posts } from "../lib/posts";
-import { Box, Button, Hero, Section, SectionIntro, Tiles } from "../lib/primer-brand";
+import { Box, Section, SectionIntro, Tiles } from "../lib/primer-brand";
 
 const description =
   "プログラミング教材制作に携わっています。個人開発では、ウェブアプリケーション開発をはじめ、ブラウザー拡張機能開発やボット開発に勤しんでいます。";
@@ -57,19 +58,15 @@ function Logo({ icon }: { icon: SimpleIcon }) {
 export default createRoute((c) => {
   return c.render(
     <>
-      <Hero variant="gridline">
-        <Hero.Label>Web Developer</Hero.Label>
-        <Hero.Heading>Kaisei Yoneyama</Hero.Heading>
-        <Hero.Description>{description}</Hero.Description>
-        <Hero.ButtonGroup>
-          <Button as="a" href="https://github.com/Kaisei-Yoneyama">
-            GitHub を見る
-          </Button>
-          <Button as="a" href="#skills">
-            スキルを見る
-          </Button>
-        </Hero.ButtonGroup>
-      </Hero>
+      <Hero
+        label="Web Developer"
+        heading="Kaisei Yoneyama"
+        description={description}
+        actions={[
+          { href: "https://github.com/Kaisei-Yoneyama", text: "GitHub を見る" },
+          { href: "#skills", text: "スキルを見る" },
+        ]}
+      />
 
       <Box borderBlockStartWidth="thin" borderColor="muted" borderStyle="solid">
         <Section id="skills" paddingBlockStart="normal" paddingBlockEnd="normal">
