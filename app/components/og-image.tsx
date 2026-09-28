@@ -1,4 +1,5 @@
-import { Hero, Stack, ThemeProvider, Token } from "../lib/primer-brand";
+import avatar from "../assets/avatar.png?inline";
+import { Avatar, Box, Hero, Stack, Text, ThemeProvider, Token } from "../lib/primer-brand";
 
 type OgImageProps = {
   label: string;
@@ -6,9 +7,17 @@ type OgImageProps = {
   description: string;
   published?: string;
   modified?: string;
+  showByline?: boolean;
 };
 
-export default function OgImage({ label, title, description, published, modified }: OgImageProps) {
+export default function OgImage({
+  label,
+  title,
+  description,
+  published,
+  modified,
+  showByline,
+}: OgImageProps) {
   return (
     <ThemeProvider
       colorMode="dark"
@@ -18,23 +27,33 @@ export default function OgImage({ label, title, description, published, modified
         height: "100%",
       }}
     >
-      <Hero
-        variant="gridline"
-        trailingComponent={
-          published
-            ? () => (
-                <Stack direction="horizontal" gap={8} padding="none">
-                  <Token variant="outline">公開 {published}</Token>
-                  {modified && <Token variant="outline">更新 {modified}</Token>}
-                </Stack>
-              )
-            : undefined
-        }
-      >
-        <Hero.Label>{label}</Hero.Label>
-        <Hero.Heading>{title}</Hero.Heading>
-        <Hero.Description>{description}</Hero.Description>
-      </Hero>
+      <Stack padding="none" justifyContent="space-between" style={{ height: "100%" }}>
+        <Hero
+          variant="gridline"
+          trailingComponent={
+            published
+              ? () => (
+                  <Stack direction="horizontal" gap={8} padding="none">
+                    <Token variant="outline">公開 {published}</Token>
+                    {modified && <Token variant="outline">更新 {modified}</Token>}
+                  </Stack>
+                )
+              : undefined
+          }
+        >
+          <Hero.Label>{label}</Hero.Label>
+          <Hero.Heading>{title}</Hero.Heading>
+          <Hero.Description>{description}</Hero.Description>
+        </Hero>
+        {showByline && (
+          <Box paddingBlockEnd={32} paddingInlineStart={32}>
+            <Stack direction="horizontal" padding="none" alignItems="center">
+              <Avatar size={48} src={avatar} alt="" />
+              <Text>Kaisei Yoneyama</Text>
+            </Stack>
+          </Box>
+        )}
+      </Stack>
     </ThemeProvider>
   );
 }

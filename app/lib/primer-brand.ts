@@ -8,6 +8,7 @@ const ns = primerBrandNs as typeof primerBrandNs & { default?: typeof primerBran
 const primerBrand = ns.default ?? ns;
 
 export const {
+  Avatar,
   Box,
   Breadcrumbs,
   Button,

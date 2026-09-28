@@ -23,6 +23,7 @@ export default createRoute(
         description={post.description}
         published={post.published}
         modified={post.modified}
+        showByline
       />,
     );
 
