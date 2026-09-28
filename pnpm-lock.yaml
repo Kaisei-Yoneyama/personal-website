@@ -15,10 +15,10 @@ importers:
         version: 5.3.0
       '@hono/react-renderer':
         specifier: ^1.0.1
-        version: 1.0.1(hono@4.13.7)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+        version: 1.0.1(hono@4.13.8)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@primer/react-brand':
-        specifier: ^0.75.1
-        version: 0.75.1(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+        specifier: ^0.76.0
+        version: 0.76.0(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@takumi-rs/core':
         specifier: ^2.14.0
         version: 2.14.0(csstype@3.2.3)(react@19.3.0)
@@ -26,11 +26,11 @@ importers:
         specifier: ^2.14.0
         version: 2.14.0(react@19.3.0)
       hono:
-        specifier: ^4.13.7
-        version: 4.13.7
+        specifier: ^4.13.8
+        version: 4.13.8
       honox:
         specifier: 0.1.61
-        version: 0.1.61(hono@4.13.7)
+        version: 0.1.61(hono@4.13.8)
       lightningcss:
         specifier: ^1.33.0
         version: 1.33.0
@@ -41,15 +41,15 @@ importers:
         specifier: ^19.3.0
         version: 19.3.0(react@19.3.0)
       simple-icons:
-        specifier: ^16.30.0
-        version: 16.30.0
+        specifier: ^16.32.0
+        version: 16.32.0
       zod:
-        specifier: ^4.6.4
-        version: 4.6.4
+        specifier: ^4.6.5
+        version: 4.6.5
     devDependencies:
       '@hono/vite-ssg':
         specifier: ^0.3.3
-        version: 0.3.3(hono@4.13.7)
+        version: 0.3.3(hono@4.13.8)
       '@mdx-js/rollup':
         specifier: ^3.1.1
         version: 3.1.1
@@ -551,8 +551,8 @@ packages:
   '@primer/behaviors@1.10.3':
     resolution: {integrity: sha512-cxxWDeR5IE7vdL0Ca0RAAAuPVrU+Bo8CSP1WfawGo4rEP1sZTi7hwl5i7TT0jCTCR0C9IfnQBfSPAkz0oznxUw==}
 
-  '@primer/react-brand@0.75.1':
-    resolution: {integrity: sha512-dSjcFTq9k4iutPtmIwxmuUYe+WM3bi/ZPtUTo5Z/mQqIEJr4fkFSVQQsnrPbscDnlgfiPTn9PVxc6O2pXZNwZw==}
+  '@primer/react-brand@0.76.0':
+    resolution: {integrity: sha512-wqwmqKGOG3V5nv8QbzzRPq/QB8PUrTpFCjrnB7ULQB/32gRxgUXigDNd9pU0wDcPzVGAxIEFg//xs6DXw8vqTQ==}
     engines: {node: '>=24.0.0', npm: '>=8.0.0'}
     peerDependencies:
       '@types/react': '>=18 <20'
@@ -1533,8 +1533,8 @@ packages:
   hastscript@5.1.2:
     resolution: {integrity: sha512-WlztFuK+Lrvi3EggsqOkQ52rKbxkXL3RwB6t5lwoa8QLMemoWfBuL43eDrwOamJyR7uKQKdmKYaBH1NZBiIRrQ==}
 
-  hono@4.13.7:
-    resolution: {integrity: sha512-c8/gF9ac8Y78/agExVocyLevgR+JlpNB444Py0FSX8pJoPdYUfUzRcXtYEYGwt6l19qIlVZPN5Mfsw9jFShmQQ==}
+  hono@4.13.8:
+    resolution: {integrity: sha512-/Gng7NfoykZl2pjukW5Z6+8Yxm3BPRf86GTbQnt0SbySkvax4fyL4H3HhY1cCpBGmiW9XDRFzRV+CXK2W8QudQ==}
     engines: {node: '>=16.9.0'}
 
   honox@0.1.61:
@@ -2496,8 +2496,8 @@ packages:
     resolution: {integrity: sha512-6x6dK6zJdpTzF4sQeNYxwtvBzf6Eg4GtlesS94HOvTudUeyK2WXAaIfmDgsyslYrRBeFIlsi54AYsFGUuhmvrQ==}
     engines: {node: '>= 0.4'}
 
-  simple-icons@16.30.0:
-    resolution: {integrity: sha512-YX/HmgEqjpn5Zs3myzKp8ek5Ti+TdrkvNWn9skGLetg9tOg0cTjYizj9ESAYJn4xwc0GQYVGzQxBELDfbxq7WQ==}
+  simple-icons@16.32.0:
+    resolution: {integrity: sha512-BwqATHxAulx7X6kNdTkecy7PBjLkgtAHcgrwYLd9iA+cD2At9DzhJwdwaSELk2+aZe01IfiM/Wxtyp68Dvup2A==}
     engines: {node: '>=0.12.18'}
 
   slice-ansi@4.0.0:
@@ -2933,8 +2933,8 @@ packages:
   zlibjs@0.3.1:
     resolution: {integrity: sha512-+J9RrgTKOmlxFSDHo0pI1xM6BLVUv+o0ZT9ANtCxGkjIVCCUdx9alUF8Gm+dGLKbkkkidWIHFDZHDMpfITt4+w==}
 
-  zod@4.6.4:
-    resolution: {integrity: sha512-AXSD6hvGdvRjajG/l1cC+d6IrhH+sjmPKtYeQdJIK8MFJl3LyClzS+o/YsVC+zQZPupAaeH5skwwm8YqYH7BqA==}
+  zod@4.6.5:
+    resolution: {integrity: sha512-v5l/aFXZQeai4awLbOpSoHecE9UiMrnfx75tEXLjNonXVARxQ5mOeipTjROUchszUNCqnE+hqAMujRsRHsut2Q==}
 
   zwitch@1.0.5:
     resolution: {integrity: sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==}
@@ -3033,25 +3033,25 @@ snapshots:
 
   '@fontsource-variable/noto-sans-jp@5.3.0': {}
 
-  '@hono/node-server@1.19.17(hono@4.13.7)':
+  '@hono/node-server@1.19.17(hono@4.13.8)':
     dependencies:
-      hono: 4.13.7
+      hono: 4.13.8
 
-  '@hono/react-renderer@1.0.1(hono@4.13.7)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+  '@hono/react-renderer@1.0.1(hono@4.13.8)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
     dependencies:
-      hono: 4.13.7
+      hono: 4.13.8
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
 
-  '@hono/vite-dev-server@0.25.3(hono@4.13.7)':
+  '@hono/vite-dev-server@0.25.3(hono@4.13.8)':
     dependencies:
-      '@hono/node-server': 1.19.17(hono@4.13.7)
-      hono: 4.13.7
+      '@hono/node-server': 1.19.17(hono@4.13.8)
+      hono: 4.13.8
       minimatch: 9.0.9
 
-  '@hono/vite-ssg@0.3.3(hono@4.13.7)':
+  '@hono/vite-ssg@0.3.3(hono@4.13.8)':
     dependencies:
-      hono: 4.13.7
+      hono: 4.13.8
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
@@ -3141,12 +3141,12 @@ snapshots:
 
   '@modelcontextprotocol/core@2.0.0':
     dependencies:
-      zod: 4.6.4
+      zod: 4.6.5
 
   '@modelcontextprotocol/server@2.0.0':
     dependencies:
       '@modelcontextprotocol/core': 2.0.0
-      zod: 4.6.4
+      zod: 4.6.5
 
   '@oddbird/popover-polyfill@0.7.2': {}
 
@@ -3286,7 +3286,7 @@ snapshots:
 
   '@primer/behaviors@1.10.3': {}
 
-  '@primer/react-brand@0.75.1(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+  '@primer/react-brand@0.76.0(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
     dependencies:
       '@oddbird/popover-polyfill': 0.7.2
       '@primer/behaviors': 1.10.3
@@ -4447,16 +4447,16 @@ snapshots:
       property-information: 5.6.0
       space-separated-tokens: 1.1.5
 
-  hono@4.13.7: {}
+  hono@4.13.8: {}
 
-  honox@0.1.61(hono@4.13.7):
+  honox@0.1.61(hono@4.13.8):
     dependencies:
       '@babel/generator': 7.29.1
       '@babel/parser': 7.29.3
       '@babel/traverse': 7.29.0
       '@babel/types': 7.29.0
-      '@hono/vite-dev-server': 0.25.3(hono@4.13.7)
-      hono: 4.13.7
+      '@hono/vite-dev-server': 0.25.3(hono@4.13.8)
+      hono: 4.13.8
       jsonc-parser: 3.3.1
       precinct: 12.2.0
     optionalDependencies:
@@ -5918,7 +5918,7 @@ snapshots:
       side-channel-map: 1.0.1
       side-channel-weakmap: 1.0.2
 
-  simple-icons@16.30.0: {}
+  simple-icons@16.32.0: {}
 
   slice-ansi@4.0.0:
     dependencies:
@@ -6302,7 +6302,7 @@ snapshots:
       rc-config-loader: 4.1.4
       read-package-up: 11.0.0
       structured-source: 4.0.0
-      zod: 4.6.4
+      zod: 4.6.5
     transitivePeerDependencies:
       - supports-color
 
@@ -6582,7 +6582,7 @@ snapshots:
 
   zlibjs@0.3.1: {}
 
-  zod@4.6.4: {}
+  zod@4.6.5: {}
 
   zwitch@1.0.5: {}
 
