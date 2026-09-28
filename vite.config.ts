@@ -28,8 +28,17 @@ export default defineConfig(({ mode }) => {
 
   return {
     build: { emptyOutDir: false },
-    // CommonJS/UMD は SSR でバンドルすると評価に失敗するため、外部化して Node.js の require に解決させる
-    ssr: { external: ["react", "react-dom", "@primer/react-brand"] },
+    ssr: {
+      external: [
+        // CommonJS/UMD は SSR でバンドルすると評価に失敗するため、外部化して Node.js の require に解決させる
+        "react",
+        "react-dom",
+        "@primer/react-brand",
+        "@takumi-rs/core",
+        "@takumi-rs/helpers",
+        "lightningcss",
+      ],
+    },
     plugins: [
       // base を直接指定すると内部で @hono/vite-dev-server に上書きされるため devServer を経由させる
       honox({ devServer: { base } }),

@@ -2,7 +2,7 @@ import "@hono/react-renderer";
 import type {} from "hono";
 import * as React from "react";
 
-import type { Frontmatter } from "./lib/posts";
+import type { Frontmatter, Post } from "./lib/posts";
 
 declare module "hono" {
   interface Env {
@@ -16,6 +16,17 @@ declare module "@hono/react-renderer" {
     title?: string;
     description?: string;
     frontmatter?: Frontmatter;
+    post?: Post;
+  }
+}
+
+declare global {
+  interface ViteTypeOptions {
+    strictImportMetaEnv: unknown;
+  }
+
+  interface ImportMetaEnv {
+    readonly VITE_ORIGIN: string;
   }
 }
 

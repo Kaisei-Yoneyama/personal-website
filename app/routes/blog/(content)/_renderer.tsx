@@ -3,9 +3,12 @@ import { renderToStaticMarkup } from "react-dom/server";
 
 import Hero from "../../../islands/hero";
 import { withBase } from "../../../lib/path";
+import { posts } from "../../../lib/posts";
 import { Box, Breadcrumbs, Prose } from "../../../lib/primer-brand";
 
-export default reactRenderer(({ children, Layout, title, description, frontmatter }) => {
+const postPathPattern = new URLPattern({ pathname: "/blog/:slug" });
+
+export default reactRenderer(({ children, Layout, c, title, description, frontmatter }) => {
   // /blog 配下のエラーページ (frontmatter なし) もここを通る
   if (!frontmatter) {
     return (
@@ -15,10 +18,17 @@ export default reactRenderer(({ children, Layout, title, description, frontmatte
     );
   }
 
+  const slug = postPathPattern.exec({ pathname: c.req.path })?.pathname.groups.slug;
+  const post = posts.find((post) => post.slug === slug);
+
+  if (!post) {
+    throw new Error('Post not found in "posts"');
+  }
+
   const html = renderToStaticMarkup(children);
 
   return (
-    <Layout title={frontmatter.title} description={frontmatter.description}>
+    <Layout title={frontmatter.title} description={frontmatter.description} post={post}>
       <>
         <Box
           paddingBlockStart={{ narrow: 32, regular: 64 }}

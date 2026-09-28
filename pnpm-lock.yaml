@@ -10,18 +10,30 @@ importers:
 
   .:
     dependencies:
+      '@fontsource-variable/noto-sans-jp':
+        specifier: ^5.3.0
+        version: 5.3.0
       '@hono/react-renderer':
         specifier: ^1.0.1
         version: 1.0.1(hono@4.13.7)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@primer/react-brand':
         specifier: ^0.75.1
         version: 0.75.1(@types/react-dom@19.3.0(@types/react@19.3.0))(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      '@takumi-rs/core':
+        specifier: ^2.14.0
+        version: 2.14.0(csstype@3.2.3)(react@19.3.0)
+      '@takumi-rs/helpers':
+        specifier: ^2.14.0
+        version: 2.14.0(react@19.3.0)
       hono:
         specifier: ^4.13.7
         version: 4.13.7
       honox:
         specifier: 0.1.61
         version: 0.1.61(hono@4.13.7)
+      lightningcss:
+        specifier: ^1.33.0
+        version: 1.33.0
       react:
         specifier: ^19.3.0
         version: 19.3.0
@@ -163,6 +175,9 @@ packages:
   '@dependents/detective-less@5.0.3':
     resolution: {integrity: sha512-v6oD9Ukp+N7V4n6p5I/+mM5fIohSfkrDSGlFm5w/pYmchvbk+sMIHsLxrFJ5Lnujewj1BzWL0K84d88lwZAMQA==}
     engines: {node: '>=18'}
+
+  '@fontsource-variable/noto-sans-jp@5.3.0':
+    resolution: {integrity: sha512-XVL9GfGBRjj523v9w3Bctu4mNq7E5rUa+AMZm8DK1EM3LAGlKC3DZMvuqkLn4DB4TwwoAjcsJUCiRpUTDzzOkw==}
 
   '@hono/node-server@1.19.17':
     resolution: {integrity: sha512-dSneS5qhiauZWGDCeK4o695Xd9nUNjviSZCMQrj10eetr8Uln1ucn6bbphOM6UynAMMtNIzZNSpL9vnASJwrPQ==}
@@ -698,6 +713,79 @@ packages:
 
   '@shikijs/vscode-textmate@10.0.2':
     resolution: {integrity: sha512-83yeghZ2xxin3Nj8z1NMd/NCuca+gsYXswywDy5bHvwlWL8tpTQmzGeUuHd9FC3E/SBEMvzJRwWEOz5gGes9Qg==}
+
+  '@takumi-rs/core-darwin-arm64@2.14.0':
+    resolution: {integrity: sha512-To8/1EFFVM40V3FlkQIkOl2Ge/xg6bP8KWlxoeBUEusJvjZ3d3PfmKoVmG9erM3oh7ztzw1u3nUXQqLFTNeJBQ==}
+    engines: {node: '>=18'}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@takumi-rs/core-darwin-x64@2.14.0':
+    resolution: {integrity: sha512-PQ5CiWB7gxap2NElJt9xzoqP0Bzm93SnY//x8OpXuiRQmsW8dOdk5M7mPpJOghebxfRuDc3YIcOEEcsQFpmncQ==}
+    engines: {node: '>=18'}
+    cpu: [x64]
+    os: [darwin]
+
+  '@takumi-rs/core-linux-arm64-gnu@2.14.0':
+    resolution: {integrity: sha512-2YKku0pJd63ojLKRY8UXerN/NCGhcdyc+HRxbFk27B4enMtxjPPKGgT6xVjBvW1J8vxsOo/eRSGMq2nDq5REBQ==}
+    engines: {node: '>=18'}
+    cpu: [arm64]
+    os: [linux]
+    libc: [glibc]
+
+  '@takumi-rs/core-linux-arm64-musl@2.14.0':
+    resolution: {integrity: sha512-0XJyEleC6qzxxDOHhobo3TjMddOEvnI3uwSDNq8EH40SUp+Qw71DTBNXqwtwT/NPDj50f8bD3w/M54a86eK3Ow==}
+    engines: {node: '>=18'}
+    cpu: [arm64]
+    os: [linux]
+    libc: [musl]
+
+  '@takumi-rs/core-linux-x64-gnu@2.14.0':
+    resolution: {integrity: sha512-fINzz8oeamnFqbg75xgOXMrzljhI8BmCf2SZl31dUr+o1oRWUuQyTBm2RjSl2nKjamHd71IoQRo3ilAUqNkadg==}
+    engines: {node: '>=18'}
+    cpu: [x64]
+    os: [linux]
+    libc: [glibc]
+
+  '@takumi-rs/core-linux-x64-musl@2.14.0':
+    resolution: {integrity: sha512-aMDWTKRSnShorZHx/rFFfk7ovnK8kffmqprwYppNIG25DaTf90GN3CYsFlgGAIRYv0aJ1CbMGjRjzxu2raorYw==}
+    engines: {node: '>=18'}
+    cpu: [x64]
+    os: [linux]
+    libc: [musl]
+
+  '@takumi-rs/core-win32-arm64-msvc@2.14.0':
+    resolution: {integrity: sha512-apuJ7bT+3tZO6PtZeuuMZ2Qkkxbi+lTniT+iAAX0lGziuTfoguIvDMhbQtQGKUbg7WUE2tqGixOHdUgab7KKCA==}
+    engines: {node: '>=18'}
+    cpu: [arm64]
+    os: [win32]
+
+  '@takumi-rs/core-win32-x64-msvc@2.14.0':
+    resolution: {integrity: sha512-s5FK8ntDdvIBPCro3OXQEWsHpMYwRLU3JLPdgZK8eILSKjCg+NenAiGDZdU+HmObuqRQn9Q3PYjMc1qwkBzmeQ==}
+    engines: {node: '>=18'}
+    cpu: [x64]
+    os: [win32]
+
+  '@takumi-rs/core@2.14.0':
+    resolution: {integrity: sha512-PGgLdS+A1xaxPhJtYy/d+k5GYw9MOcwcLMs2zT4RGNkw28FxN+WWHvR1+nnn34rdyD6sG6K2W+50oQZtQV1h/g==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      csstype: '*'
+    peerDependenciesMeta:
+      csstype:
+        optional: true
+
+  '@takumi-rs/helpers@2.14.0':
+    resolution: {integrity: sha512-jFIpuWfBMAxlULx3tEk2V+FCs1CLOMo2/c7h3I2P+eNzMmxwE9TJ/BtwJVghnLlFW1M88QW/ZOY/E7MqXACWJA==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      preact: ^10.0.0
+      react: ^18.0.0 || ^19.0.0
+    peerDependenciesMeta:
+      preact:
+        optional: true
+      react:
+        optional: true
 
   '@textlint-rule/textlint-rule-no-invalid-control-character@3.0.0':
     resolution: {integrity: sha512-2o9n4z49ntSPtJPlcJtxakyB4dAg2MKSvR9ZCZEHjye0ee27oWYzK6yHz2HjsXQqt9VeCwxNHDOIGIx2CQX0Dw==}
@@ -2943,6 +3031,8 @@ snapshots:
       gonzales-pe: 4.3.0
       node-source-walk: 7.0.2
 
+  '@fontsource-variable/noto-sans-jp@5.3.0': {}
+
   '@hono/node-server@1.19.17(hono@4.13.7)':
     dependencies:
       hono: 4.13.7
@@ -3310,6 +3400,51 @@ snapshots:
       '@types/hast': 3.0.5
 
   '@shikijs/vscode-textmate@10.0.2': {}
+
+  '@takumi-rs/core-darwin-arm64@2.14.0':
+    optional: true
+
+  '@takumi-rs/core-darwin-x64@2.14.0':
+    optional: true
+
+  '@takumi-rs/core-linux-arm64-gnu@2.14.0':
+    optional: true
+
+  '@takumi-rs/core-linux-arm64-musl@2.14.0':
+    optional: true
+
+  '@takumi-rs/core-linux-x64-gnu@2.14.0':
+    optional: true
+
+  '@takumi-rs/core-linux-x64-musl@2.14.0':
+    optional: true
+
+  '@takumi-rs/core-win32-arm64-msvc@2.14.0':
+    optional: true
+
+  '@takumi-rs/core-win32-x64-msvc@2.14.0':
+    optional: true
+
+  '@takumi-rs/core@2.14.0(csstype@3.2.3)(react@19.3.0)':
+    dependencies:
+      '@takumi-rs/helpers': 2.14.0(react@19.3.0)
+    optionalDependencies:
+      '@takumi-rs/core-darwin-arm64': 2.14.0
+      '@takumi-rs/core-darwin-x64': 2.14.0
+      '@takumi-rs/core-linux-arm64-gnu': 2.14.0
+      '@takumi-rs/core-linux-arm64-musl': 2.14.0
+      '@takumi-rs/core-linux-x64-gnu': 2.14.0
+      '@takumi-rs/core-linux-x64-musl': 2.14.0
+      '@takumi-rs/core-win32-arm64-msvc': 2.14.0
+      '@takumi-rs/core-win32-x64-msvc': 2.14.0
+      csstype: 3.2.3
+    transitivePeerDependencies:
+      - preact
+      - react
+
+  '@takumi-rs/helpers@2.14.0(react@19.3.0)':
+    optionalDependencies:
+      react: 19.3.0
 
   '@textlint-rule/textlint-rule-no-invalid-control-character@3.0.0': {}
 

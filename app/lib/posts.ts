@@ -18,7 +18,7 @@ const frontmatterSchema = z
 
 export type Frontmatter = z.infer<typeof frontmatterSchema>;
 
-export type Post = Frontmatter & { slug: string; href: string };
+export type Post = Frontmatter & { slug: string; href: string; ogImage: string };
 
 const modules = import.meta.glob("/app/routes/blog/\\(content\\)/*.{md,mdx}", { eager: true });
 
@@ -34,7 +34,8 @@ export const posts: readonly Post[] = Object.entries(result.data)
   .map(([path, { frontmatter }]) => {
     const slug = parse(path).name;
     const href = withBase(`/blog/${slug}`);
+    const ogImage = withBase(`/og/blog/${slug}.png`);
 
-    return { ...frontmatter, slug, href };
+    return { ...frontmatter, slug, href, ogImage };
   })
   .toSorted((a, b) => b.published.localeCompare(a.published));
