@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  vrt:
+  test:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -30,5 +30,9 @@ jobs:
           runtime: node@24
           cache: true
 
-      - name: Run visual regression tests
-        run: pnpm run test:visual
+      - parallel:
+          - name: Run unit tests
+            run: pnpm run test:unit
+
+          - name: Run visual regression tests
+            run: pnpm run test:visual

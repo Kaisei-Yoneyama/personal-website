@@ -47,7 +47,7 @@ function withoutNull(tokenOrValues: TokenOrValue[]): TokenOrValue[] {
 /**
  * Takumi が解釈できるようにトランスパイルする。
  */
-function forTakumi(css: string): string {
+export function forTakumi(css: string): string {
   const { code } = transform({
     filename: "primer-brand.css",
     code: new TextEncoder().encode(css),

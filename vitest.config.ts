@@ -1,4 +1,4 @@
-import { defineConfig, mergeConfig } from "vitest/config";
+import { defaultExclude, defineConfig, mergeConfig } from "vitest/config";
 
 import viteConfig from "./vite.config";
 
@@ -11,6 +11,12 @@ export default defineConfig((configEnv) =>
       test: {
         css: true,
         projects: [
+          {
+            test: {
+              name: "unit",
+              exclude: [vrtPattern, ...defaultExclude],
+            },
+          },
           {
             test: {
               name: "vrt",

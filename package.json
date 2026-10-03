@@ -5,6 +5,7 @@
     "dev": "vite",
     "build": "vite build --mode client && vite build",
     "preview": "vite preview",
+    "test:unit": "vitest --project unit",
     "test:visual": "vitest --project vrt",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
