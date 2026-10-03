@@ -5,6 +5,7 @@
     "dev": "vite",
     "build": "vite build --mode client && vite build",
     "preview": "vite preview",
+    "test:visual": "vitest --project vrt",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
     "lint:github": "oxlint --format=github",
@@ -30,6 +31,7 @@
     "zod": "^4.6.5"
   },
   "devDependencies": {
+    "@blazediff/vitest": "^1.1.25",
     "@hono/vite-ssg": "^0.3.3",
     "@mdx-js/rollup": "^3.1.1",
     "@shikijs/rehype": "^4.4.3",
@@ -49,7 +51,8 @@
     "textlint-rule-preset-ja-spacing": "^3.0.3",
     "textlint-rule-preset-ja-technical-writing": "^12.0.2",
     "textlint-rule-prh": "^6.1.0",
-    "vite": "^8.3.0"
+    "vite": "^8.3.0",
+    "vitest": "^5.0.3"
   },
   "engines": {
     "node": ">=24.0.0 <25.0.0",

@@ -14,6 +14,11 @@ dist/
 .idea/usage.statistics.xml
 .idea/shelf
 
+# test
+.vitest/
+*.received.png
+*.diff.png
+
 # deps
 node_modules/
 
