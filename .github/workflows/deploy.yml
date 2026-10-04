@@ -13,6 +13,8 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
+cache-mode: none
+
 jobs:
   build:
     permissions:
