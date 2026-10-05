@@ -22,7 +22,7 @@ import { posts } from "../lib/posts";
 import { Box, Section, SectionIntro, Tiles } from "../lib/primer-brand";
 
 const description =
-  "プログラミング教材制作に携わっています。個人開発では、ウェブアプリケーション開発をはじめ、ブラウザー拡張機能開発やボット開発に勤しんでいます。";
+  "プログラミング教材制作に携わっています。個人開発では、ウェブアプリケーションをはじめ、ブラウザー拡張機能やボットの開発に勤しんでいます。";
 
 const SKILLS: readonly { icon: SimpleIcon; name: string }[] = [
   { icon: siTypescript, name: "TypeScript" },
@@ -59,7 +59,7 @@ export default createRoute((c) => {
   return c.render(
     <>
       <Hero
-        label="Web Developer"
+        label="Hobbyist programmer"
         heading="Kaisei Yoneyama"
         description={description}
         actions={[

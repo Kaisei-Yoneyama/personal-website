@@ -6,9 +6,9 @@ import { renderOgImage } from "../../lib/og-image";
 export default createRoute(async (c) => {
   const ogImage = await renderOgImage(
     <OgImage
-      label="Web Developer"
+      label="Hobbyist programmer"
       title="Kaisei Yoneyama"
-      description="プログラミング教材制作に携わっています。個人開発では、ウェブアプリケーション開発をはじめ、ブラウザー拡張機能開発やボット開発に勤しんでいます。"
+      description="プログラミング教材制作に携わっています。個人開発では、ウェブアプリケーションをはじめ、ブラウザー拡張機能やボットの開発に勤しんでいます。"
     />,
   );
 
